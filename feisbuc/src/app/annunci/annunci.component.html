@@ -1,0 +1,18 @@
+<br />
+{{ annunci.nome }}
+<br />
+{{ annunci.numero }}
+<br />
+{{ annunci.msg }}
+<br />
+
+<label>COMMENTA:</label> <input type="text" #commento />
+<br />
+<button (click)="commenta(commento)">COMMENTA</button>
+<br />
+<app-comment *ngFor="let c of annunci.commento" [commento]="c"></app-comment>
+<br />
+<div *ngIf="likeview">
+  <button (click)="addLike()">LIKE al post</button>
+  {{ annunci.like }}
+</div>

@@ -1,0 +1,11 @@
+
+  <label>NOME:</label> <input type="text" #nome>
+  <br>
+  <label>NUMERO:</label> <input type="text" #numero>
+  <br>
+  <label>MESSAGGIO:</label> <input type="text" #msg>
+  <br>
+  <button (click) = "invia(nome,numero,msg)">INVIA</button>
+
+  <app-annunci *ngFor = "let a of listaAnnunci " [annunci] = "a" ></app-annunci>
+  
